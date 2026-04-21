@@ -1,5 +1,5 @@
 {
-  "name": "hotel-rajdhani-palace-server",
+  "name": "hotel-rajdhani-palace-backend",
   "version": "1.0.0",
   "type": "module",
   "main": "src/server.js",

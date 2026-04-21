@@ -14,8 +14,8 @@ Hotel Rajdhani Palace is a full-stack hotel booking platform built with the MERN
 ## Folder Structure
 
 ```bash
-client/   # React frontend
-server/   # Express backend
+frontend/   # React frontend
+backend/    # Express backend
 ```
 
 ## Features
@@ -42,15 +42,15 @@ npm run install:all
 Copy the examples below and create real `.env` files.
 
 ```bash
-cp server/.env.example server/.env
-cp client/.env.example client/.env
+cp backend/.env.example backend/.env
+cp frontend/.env.example frontend/.env
 ```
 
 On Windows PowerShell you can use:
 
 ```powershell
-Copy-Item server/.env.example server/.env
-Copy-Item client/.env.example client/.env
+Copy-Item backend/.env.example backend/.env
+Copy-Item frontend/.env.example frontend/.env
 ```
 
 ### 3. Start MongoDB
@@ -109,19 +109,19 @@ When the backend starts for the first time, it auto-creates an admin account fro
 The repo includes [`render.yaml`](C:\Users\jadha\OneDrive\Documents\rajdhani\render.yaml), so Render can auto-detect the backend service settings.
 
 1. In Render, create a new Blueprint or Web Service from this GitHub repo.
-2. If using the manual flow, set root directory to `server`.
+2. If using the manual flow, set root directory to `backend`.
 3. Build command: `npm install`
 4. Start command: `npm start`
-5. Add environment variables from `server/.env.example`.
+5. Add environment variables from `backend/.env.example`.
 6. Set `CLIENT_URL` to your deployed Vercel frontend URL.
 7. Use MongoDB Atlas for `MONGODB_URI` in production.
 
 ### Vercel Frontend
 
-The frontend includes [`client/vercel.json`](C:\Users\jadha\OneDrive\Documents\rajdhani\client\vercel.json) so React routes work correctly after deployment.
+The frontend includes [`frontend/vercel.json`](C:\Users\jadha\OneDrive\Documents\rajdhani\frontend\vercel.json) so React routes work correctly after deployment.
 
 1. Import the repository into Vercel.
-2. Set the root directory to `client`.
+2. Set the root directory to `frontend`.
 3. Framework preset: `Vite`.
 4. Build command: `npm run build`
 5. Output directory: `dist`
@@ -141,7 +141,7 @@ The frontend includes [`client/vercel.json`](C:\Users\jadha\OneDrive\Documents\r
 - The booking form calculates price based on room rate and number of nights.
 - Users can only update or delete their own bookings.
 - Admins can manage all bookings and all rooms.
-- Room availability and overlapping date checks are enforced on the server.
+- Room availability and overlapping date checks are enforced on the backend.
 
 ## Submission Tips
 

@@ -1,0 +1,23 @@
+services:
+  - type: web
+    name: hotel-rajdhani-palace-api
+    runtime: node
+    rootDir: server
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /
+    envVars:
+      - key: NODE_VERSION
+        value: 22
+      - key: CLIENT_URL
+        sync: false
+      - key: JWT_SECRET
+        sync: false
+      - key: MONGODB_URI
+        sync: false
+      - key: ADMIN_NAME
+        value: Hotel Admin
+      - key: ADMIN_EMAIL
+        value: admin@rajdhanipalace.com
+      - key: ADMIN_PASSWORD
+        sync: false

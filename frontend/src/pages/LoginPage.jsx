@@ -26,7 +26,11 @@ function LoginPage() {
       await login(formData);
       navigate(redirectTo, { replace: true });
     } catch (loginError) {
-      setError(loginError.response?.data?.message || "Login failed. Please check your details.");
+      setError(
+        loginError.response?.data?.message
+          || (loginError.request ? "Unable to reach the server. Please try again in a moment." : "")
+          || "Login failed. Please check your details.",
+      );
     } finally {
       setBusy(false);
     }

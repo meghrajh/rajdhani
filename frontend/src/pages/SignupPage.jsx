@@ -23,7 +23,11 @@ function SignupPage() {
       await register(formData);
       navigate("/dashboard", { replace: true });
     } catch (registerError) {
-      setError(registerError.response?.data?.message || "Registration failed. Please try again.");
+      setError(
+        registerError.response?.data?.message
+          || (registerError.request ? "Unable to reach the server. Please try again in a moment." : "")
+          || "Registration failed. Please try again.",
+      );
     } finally {
       setBusy(false);
     }

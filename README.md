@@ -125,14 +125,14 @@ The frontend includes [`frontend/vercel.json`](C:\Users\jadha\OneDrive\Documents
 3. Framework preset: `Vite`.
 4. Build command: `npm run build`
 5. Output directory: `dist`
-6. Add `VITE_API_BASE_URL` and point it to your Render backend, for example `https://your-backend.onrender.com/api`.
+6. Add `VITE_API_BASE_URL` and point it to your Render backend, for example `https://rajdhani-1.onrender.com/api`.
 7. Deploy.
 
 ## Production Checklist
 
 1. Deploy MongoDB Atlas and copy the connection string into Render as `MONGODB_URI`.
 2. Deploy the backend on Render and copy the live URL.
-3. Deploy the frontend on Vercel with `VITE_API_BASE_URL` set to `https://your-render-service.onrender.com/api`.
+3. Deploy the frontend on Vercel with `VITE_API_BASE_URL` set to `https://rajdhani-1.onrender.com/api`.
 4. Update Render `CLIENT_URL` to your final Vercel URL so CORS accepts the frontend.
 5. Log in with the admin email from Render environment settings after the backend starts.
 
